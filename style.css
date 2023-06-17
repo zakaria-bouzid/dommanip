@@ -49,7 +49,6 @@ header, .content :where(i, p, span){
 .quote-area .quote{
   font-size: 22px;
   text-align: center;
-  word-break: break-all;
 }
 .content .author{
   display: flex;
@@ -111,4 +110,24 @@ ul .speech.active{
 .buttons button.loading{
   opacity: 0.7;
   pointer-events: none;
+}
+#favorite-quote-btn {
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  background: #5372F0;
+  padding: 13px 22px;
+}
+#favorite-quotes-list{
+  font-size: 16px;
+  list-style-type: none;
+}
+h2{
+  margin-top: 25px;
+}
+li{
+  padding: 5px;
 }
