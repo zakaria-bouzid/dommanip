@@ -5,6 +5,9 @@ speechBtn = document.querySelector(".speech"),
 copyBtn = document.querySelector(".copy"),
 twitterBtn = document.querySelector(".twitter"),
 synth = speechSynthesis;
+favoriteQuoteBtn = document.getElementById('favorite-quote-btn');
+favoriteQuotesList = document.getElementById('favorite-quotes-list')
+
 function randomQuote(){
     quoteBtn.classList.add("loading");
     quoteBtn.innerText = "Loading Quote...";
@@ -32,3 +35,9 @@ twitterBtn.addEventListener("click", ()=>{
     window.open(tweetUrl, "_blank");
 });
 quoteBtn.addEventListener("click", randomQuote);
+favoriteQuoteBtn.addEventListener('click', function() {
+    const quote = quoteText.textContent;
+    const li = document.createElement('li');
+    li.textContent = quote;
+    favoriteQuotesList.appendChild(li);
+});
